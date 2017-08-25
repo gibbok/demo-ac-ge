@@ -14,14 +14,19 @@ class Task extends Component {
         this.props.onTitleChange(this.props.id, event.target.value);
         event.preventDefault();
     }
+    componentDidMount() {
+        // focus input after rendering
+        this.titleInput.focus();
+    }
     render() {
         return (
             <div>
                 <div>
                     <input type="text"
                         defaultValue={this.props.title}
+                        ref={(input) => { this.titleInput = input; }}
                         onChange={this.onTitleChange}
-                        // onChange={(e) => this.onTitleChange(e.target.value)}
+                    // onChange={(e) => this.onTitleChange(e.target.value)}
                     />
                 </div>
                 <div>
