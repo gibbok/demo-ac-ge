@@ -20,12 +20,15 @@ class Task extends Component {
                 <div>
                     <input type="text"
                         defaultValue={this.props.title}
-                        onChange={this.onTitleChange} />
+                        onChange={this.onTitleChange}
+                        // onChange={(e) => this.onTitleChange(e.target.value)}
+                    />
                 </div>
                 <div>
                     <DeleteButton
                         id={this.props.id}
-                        onTaskDelete={this.props.onTaskDelete} />
+                        onTaskDelete={this.props.onTaskDelete}
+                    />
                 </div>
             </div>
         );
@@ -34,4 +37,4 @@ class Task extends Component {
 
 export default Task;
 
-// onChange={(e) => this.onTitleChange(e.target.value)}
+
