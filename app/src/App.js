@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import AddButton from './AddButton.js'
+import AddButton from './AddButton.js';
+import TodoList from './TodoList.js';
 import logo from './logo.svg';
 import './App.css';
 
@@ -36,6 +37,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <TodoList data={this.state.data} />
         <AddButton />
       </div>
     );
