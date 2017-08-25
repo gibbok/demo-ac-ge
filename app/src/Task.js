@@ -7,9 +7,13 @@ class Task extends Component {
     }
     render() {
         return (
-            <div id={this.props.id}>
-                {this.props.title}
-                <DeleteButton />
+            <div>
+                <div>
+                    <input type="text" defaultValue={this.props.title} />
+                </div>
+                <div>
+                    <DeleteButton />
+                </div>
             </div>
         );
     }

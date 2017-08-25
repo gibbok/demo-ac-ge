@@ -9,7 +9,6 @@ class TasksList extends Component {
         const data = this.props.data;
         const listItems = data.map(todo => {
             return <Task key={todo.id.toString()} title={todo.title} />
-            //return <div key={todo.id.toString()}>{todo.title}</div>
         })
         return (
             <div>{listItems}</div>
