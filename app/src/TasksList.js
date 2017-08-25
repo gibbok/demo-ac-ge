@@ -3,7 +3,7 @@ import Task from './Task.js'
 
 class TasksList extends Component {
     constructor(props) {
-        super(props);;
+        super(props);
     }
     render() {
         const data = this.props.data;
@@ -15,7 +15,7 @@ class TasksList extends Component {
                 onTitleChange={this.props.onTitleChange}
                 onTaskDelete={this.props.onTaskDelete}
             />
-        })
+        });
         return (
             <div>{listItems}</div>
         )
