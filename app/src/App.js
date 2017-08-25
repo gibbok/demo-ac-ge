@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import AddButton from './AddButton.js';
-import TodoList from './TodoList.js';
+import TasksList from './TasksList.js';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-        data: [
-          {
-            id: 0,
-            title: 'Buy milk',
-            status: 0, // 0 = todo, 1 = done
-          },
-          {
-            id: 1,
-            title: 'Buy bread',
-            status: 0,
-          },
-          {
-            id: 1,
-            title: 'Buy yogurt',
-            status: 0,
-          }
+      data: [
+        {
+          id: 0,
+          title: 'Buy milk',
+          status: 0, // 0 = todo, 1 = done
+        },
+        {
+          id: 1,
+          title: 'Buy bread',
+          status: 0,
+        },
+        {
+          id: 2,
+          title: 'Buy yogurt',
+          status: 0,
+        }
       ]
     };
   }
@@ -37,7 +37,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <TodoList data={this.state.data} />
+        <TasksList data={this.state.data} />
         <AddButton />
       </div>
     );

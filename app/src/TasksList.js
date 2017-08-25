@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import Task from './Task.js'
 
-class TodoList extends Component {
-    constructor(props){
+class TasksList extends Component {
+    constructor(props) {
         super(props);
     }
-    render(){
-        debugger
-        let data = this.props.data;
-        let listItems = data.map(todo => {
+    render() {
+        const data = this.props.data;
+        const listItems = data.map(todo => {
             return <div key={todo.id.toString()}>{todo.title}</div>
         })
         return (
@@ -16,4 +16,4 @@ class TodoList extends Component {
     }
 }
 
-export default TodoList;
+export default TasksList;
