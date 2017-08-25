@@ -7,10 +7,11 @@ class Task extends Component {
         this.state = {
             title: props.title
         };
-        this.handleInputChange = this.handleInputChange.bind(this);
+        this.onTitleChange = this.onTitleChange.bind(this);
     }
-    handleInputChange(event) {
-        this.setState({title: event.value});
+    onTitleChange(event) {
+        // lifting up state
+        this.props.onTitleChange(this.props.id, event.target.value);
         event.preventDefault();
     }
     render() {
@@ -19,7 +20,7 @@ class Task extends Component {
                 <div>
                     <input type="text"
                         defaultValue={this.props.title}
-                        onChange={this.handleInputChange} />
+                        onChange={this.onTitleChange} />
                 </div>
                 <div>
                     <DeleteButton />
@@ -30,3 +31,5 @@ class Task extends Component {
 }
 
 export default Task;
+
+// onChange={(e) => this.onTitleChange(e.target.value)}

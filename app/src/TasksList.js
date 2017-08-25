@@ -3,12 +3,17 @@ import Task from './Task.js'
 
 class TasksList extends Component {
     constructor(props) {
-        super(props);
+        super(props);;
     }
     render() {
         const data = this.props.data;
         const listItems = data.map(todo => {
-            return <Task key={todo.id.toString()} title={todo.title} />
+            return <Task
+                id={todo.id}
+                key={todo.id.toString()}
+                title={todo.title}
+                onTitleChange={this.props.onTitleChange}
+            />
         })
         return (
             <div>{listItems}</div>
