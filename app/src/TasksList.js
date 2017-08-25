@@ -7,7 +7,7 @@ class TasksList extends Component {
     }
     render() {
         const data = this.props.data;
-        const listItems = data.map(todo => {
+        const listItems = data.length === 0 ? 'List is empty' : data.map(todo => {
             return <Task
                 id={todo.id}
                 key={todo.id.toString()}
@@ -17,7 +17,7 @@ class TasksList extends Component {
             />
         });
         return (
-            <div>{listItems.length > 0 ? listItems : 'List is empty'}</div>
+            <div>{listItems}</div>
         )
     }
 }
