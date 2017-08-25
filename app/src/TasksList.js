@@ -8,7 +8,8 @@ class TasksList extends Component {
     render() {
         const data = this.props.data;
         const listItems = data.map(todo => {
-            return <div key={todo.id.toString()}>{todo.title}</div>
+            return <Task key={todo.id.toString()} title={todo.title} />
+            //return <div key={todo.id.toString()}>{todo.title}</div>
         })
         return (
             <div>{listItems}</div>

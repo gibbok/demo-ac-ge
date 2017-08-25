@@ -7,7 +7,7 @@ class Task extends Component {
     }
     render() {
         return (
-            <div>
+            <div id={this.props.id}>
                 {this.props.title}
                 <DeleteButton />
             </div>
