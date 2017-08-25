@@ -17,7 +17,7 @@ class TasksList extends Component {
             />
         });
         return (
-            <div>{listItems}</div>
+            <div>{listItems.length > 0 ? listItems : 'List is empty'}</div>
         )
     }
 }
