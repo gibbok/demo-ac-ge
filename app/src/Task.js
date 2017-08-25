@@ -23,7 +23,9 @@ class Task extends Component {
                         onChange={this.onTitleChange} />
                 </div>
                 <div>
-                    <DeleteButton />
+                    <DeleteButton
+                        id={this.props.id}
+                        onTaskDelete={this.props.onTaskDelete} />
                 </div>
             </div>
         );

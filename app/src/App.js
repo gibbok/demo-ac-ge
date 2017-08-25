@@ -12,24 +12,34 @@ class App extends Component {
         {
           id: 0,
           title: 'Buy milk',
-          status: 0, // 0 = todo, 1 = done
+          isDone: false
         },
         {
           id: 1,
           title: 'Buy bread',
-          status: 0,
+          isDone: false
         },
         {
           id: 2,
           title: 'Buy yogurt',
-          status: 0,
+          isDone: false
         }
       ]
     };
     this.onTitleChange = this.onTitleChange.bind(this);
+    this.onTaskDelete = this.onTaskDelete.bind(this);
   }
   onTitleChange(id, title) {
-    alert(id + ' ' + title);
+    let data = [...this.state.data];
+    const index = data.findIndex(item => item.id === id);
+    data[index].title = title;
+    this.setState({ data: data });
+  }
+  onTaskDelete(id) {
+    let data = [...this.state.data]
+    const index = data.findIndex(item => item.id === id);
+    data.splice(index, 1);
+    this.setState({ data: data });
   }
   render() {
     return (
@@ -43,6 +53,7 @@ class App extends Component {
         </p>
         <TasksList data={this.state.data}
           onTitleChange={this.onTitleChange}
+          onTaskDelete={this.onTaskDelete}
         />
         <AddButton />
       </div>

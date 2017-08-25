@@ -13,6 +13,7 @@ class TasksList extends Component {
                 key={todo.id.toString()}
                 title={todo.title}
                 onTitleChange={this.props.onTitleChange}
+                onTaskDelete={this.props.onTaskDelete}
             />
         })
         return (
