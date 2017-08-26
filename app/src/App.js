@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import AddButton from './AddButton.js';
+import Header from './Header.js';
+import AddTask from './AddTask.js';
 import TasksList from './TasksList.js';
-import logo from './logo.svg';
 import './App.css';
 
 let createRandomId = () => Math.random().toString(36).substr(2, 10);
@@ -56,16 +56,13 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="app__header">
-          <img src={logo} className="app__logo" alt="logo" />
-          <h2>React Task List</h2>
-        </div>
+        <Header />
         <TasksList
           data={this.state.data}
           onTitleChange={this.onTitleChange}
           onTaskDelete={this.onTaskDelete}
         />
-        <AddButton
+        <AddTask
           onTaskAdd={this.onTaskAdd}
         />
       </div>

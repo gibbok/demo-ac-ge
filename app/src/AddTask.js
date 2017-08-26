@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './AddButton.css';
+import './AddTask.css';
 
-class AddButton extends Component {
+class AddTask extends Component {
     constructor(props) {
         super(props);
         this.onAddClick = this.onAddClick.bind(this);
@@ -11,11 +11,11 @@ class AddButton extends Component {
     }
     render() {
         return (
-            <div className="addButton">
-                <button type="button" onClick={this.onAddClick}>Add a task</button>
+            <div className="addTask">
+                <button type="button" onClick={this.onAddClick}>Add task</button>
             </div>
         );
     }
 }
 
-export default AddButton;
+export default AddTask;
