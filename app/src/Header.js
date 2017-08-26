@@ -10,7 +10,7 @@ class Header extends Component {
         return (
             <div className="header">
                 <img src={logo} className="header__logo" alt="logo" />
-                <h2>React Task List</h2>
+                <h1 className="header__title">React Task List</h1>
             </div>
         );
     }

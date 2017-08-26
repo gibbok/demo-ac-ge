@@ -4,15 +4,21 @@
     flex-direction: column;
     background-color: #222;
     color: #ffffff;
+    padding: 15px;
   }
 
   .header__logo {
     animation: app__logoSpin infinite 20s linear;
-    height: 80px;
+    height: 60px;
   }
   
   @keyframes app__logoSpin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+  }
+  .header__title{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
   
