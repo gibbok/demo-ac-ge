@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DeleteButton from './DeleteButton.js'
+import './Task.css';
 
 class Task extends Component {
     constructor(props) {
@@ -20,8 +21,8 @@ class Task extends Component {
     }
     render() {
         return (
-            <div>
-                <div>
+            <div className="task">
+                <div className="task__input" >
                     <input type="text"
                         defaultValue={this.props.title}
                         ref={(input) => { this.titleInput = input; }}
@@ -29,7 +30,7 @@ class Task extends Component {
                     // onChange={(e) => this.onTitleChange(e.target.value)}
                     />
                 </div>
-                <div>
+                <div className="task__delete" >
                     <DeleteButton
                         id={this.props.id}
                         onTaskDelete={this.props.onTaskDelete}

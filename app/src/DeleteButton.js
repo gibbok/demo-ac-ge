@@ -10,9 +10,11 @@ class DeleteButton extends Component {
     }
     render() {
         return (
-            <button onClick={this.onDeleteClick}>Delete</button>
+            <i className="material-icons dp48" onClick={this.onDeleteClick}>close</i>
+           
         );
     }
 }
 
 export default DeleteButton;
+// <button onClick={this.onDeleteClick}>Delete</button>

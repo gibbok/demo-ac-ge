@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Task from './Task.js'
+import './TasksList.css';
 
 class TasksList extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class TasksList extends Component {
             />
         });
         return (
-            <div>{listItems}</div>
+            <div className="tasksList">{listItems}</div>
         )
     }
 }
