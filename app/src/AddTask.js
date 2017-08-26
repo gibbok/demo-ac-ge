@@ -12,7 +12,7 @@ class AddTask extends Component {
     render() {
         return (
             <div className="addTask">
-                <button type="button" onClick={this.onAddClick}>Add task</button>
+                <button type="button" className="addTask__button" onClick={this.onAddClick}>Add task</button>
             </div>
         );
     }

@@ -9,3 +9,11 @@
 .task__delete {
 
 }
+
+.task__delete > i {
+    color: #A6A6A6;
+}
+
+.task__delete > i:hover {
+    filter: brightness(70%);
+}
