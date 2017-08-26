@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './Header.css';
 import logo from './logo.svg';
 
+/* 
+ * Main app header.
+ */
 class Header extends Component {
     constructor(props) {
         super(props);

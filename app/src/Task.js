@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import DeleteButton from './DeleteButton.js'
 import './Task.css';
 
+/* 
+ * Task component.
+ * Allow user to enter, edit or delete a task.
+ */
 class Task extends Component {
     constructor(props) {
         super(props);
@@ -17,6 +21,7 @@ class Task extends Component {
     }
     componentDidMount() {
         // focus input after rendering
+        // keep a dom reference using ref
         this.titleInput.focus();
     }
     render() {
@@ -27,7 +32,6 @@ class Task extends Component {
                         defaultValue={this.props.title}
                         ref={(input) => { this.titleInput = input; }}
                         onChange={this.onTitleChange}
-                    // onChange={(e) => this.onTitleChange(e.target.value)}
                     />
                 </div>
                 <div className="task__delete" >
@@ -43,4 +47,4 @@ class Task extends Component {
 
 export default Task;
 
-
+// onChange={(e) => this.onTitleChange(e.target.value)}
