@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AddButton.css';
 
 class AddButton extends Component {
     constructor(props) {
@@ -10,7 +11,9 @@ class AddButton extends Component {
     }
     render() {
         return (
-            <button type="button" onClick={this.onAddClick}>Add a task</button>
+            <div className="addButton">
+                <button type="button" onClick={this.onAddClick}>Add a task</button>
+            </div>
         );
     }
 }

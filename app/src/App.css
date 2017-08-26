@@ -16,6 +16,9 @@ body{
   height: 150px;
   padding: 20px;
   color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 @keyframes app__logoSpin {
